@@ -4,7 +4,7 @@ import com.example.common.UserSingletonService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
+/** 单例模式实现
  * @author zhougaojun
  */
 @RestController
