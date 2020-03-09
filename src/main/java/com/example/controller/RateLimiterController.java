@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * guava 令牌通限流算法
  *
- * @description: RateLimiterController
- * @author: zhougaojun
- * @date: 2019/07/02
+ * @author zhougaojun
  */
 @Slf4j
 @RestController
@@ -19,13 +17,12 @@ public class RateLimiterController {
     /**
      * 每秒产生10个令牌
      */
-    private static final RateLimiter rateLimiter = RateLimiter.create(100);
+    private static final RateLimiter rateLimiter = RateLimiter.create(10);
 
     @GetMapping("/limit/test")
     public String test() {
-        log.info("开始处理请求!");
         if (rateLimiter.tryAcquire()) {
-            log.info("请求成功！");
+            log.info("请求处理成功！");
             return "success";
         }
         throw new RuntimeException("服务器繁忙");
