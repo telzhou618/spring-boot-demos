@@ -15,7 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 public class UserCrudController {
 
-
     private UserMapper userMapper;
 
     @GetMapping("/user/list")

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SingletonController {
 
-
     @GetMapping("/user/singleton")
     public String getUserSingleton() {
         return UserSingletonService.getInstance().toString();
