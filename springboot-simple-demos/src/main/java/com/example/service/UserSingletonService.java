@@ -8,7 +8,7 @@ public class UserSingletonService {
     private static UserSingletonService userSingleton;
 
     /**
-     * 性能高的单例模式，推荐方式
+     * 性能高的单例模式，推荐方式 👍👍👍👍👍
      *
      * @return
      */

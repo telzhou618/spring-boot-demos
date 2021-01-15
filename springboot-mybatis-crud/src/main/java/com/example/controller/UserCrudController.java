@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class UserCrudController {
 
-
     private UserMapper userMapper;
 
     @GetMapping("/user/list")
