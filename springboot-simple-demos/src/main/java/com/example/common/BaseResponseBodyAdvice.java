@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.common;
 
 import com.alibaba.fastjson.JSON;
 import com.example.common.Result;

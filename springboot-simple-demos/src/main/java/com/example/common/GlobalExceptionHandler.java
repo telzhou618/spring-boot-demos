@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.common;
 
 import com.example.common.Result;
 import lombok.extern.slf4j.Slf4j;
