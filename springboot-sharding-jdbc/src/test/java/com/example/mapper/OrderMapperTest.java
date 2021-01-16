@@ -34,7 +34,7 @@ class OrderMapperTest extends SpringTests {
     @Test
     public void selectBetween() {
         QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
-        queryWrapper.between("id", 1L, 10000L);
+        queryWrapper.between("id", 1350399038318133250L, 1350399038448156673L);
         orderMapper.selectList(queryWrapper)
                 .forEach(System.out::println);
     }
