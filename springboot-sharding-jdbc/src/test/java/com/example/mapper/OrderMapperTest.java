@@ -38,4 +38,13 @@ class OrderMapperTest extends SpringTests {
         orderMapper.selectList(queryWrapper)
                 .forEach(System.out::println);
     }
+
+    @Test
+    public void selectBetween2() {
+        QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
+        queryWrapper.between("id", 1350399038318133250L, 1350399038448156673L);
+        queryWrapper.eq("order_name", "order_name7");
+        orderMapper.selectList(queryWrapper)
+                .forEach(System.out::println);
+    }
 }
