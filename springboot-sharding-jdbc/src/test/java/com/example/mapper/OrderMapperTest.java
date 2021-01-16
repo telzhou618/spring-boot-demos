@@ -1,5 +1,6 @@
 package com.example.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.SpringTests;
 import com.example.entity.Order;
 import org.junit.jupiter.api.Test;
@@ -24,7 +25,17 @@ class OrderMapperTest extends SpringTests {
     @Test
     public void selectAll() {
         orderMapper.selectList(null)
-                .stream()
+                .forEach(System.out::println);
+    }
+
+    /**
+     * 范围查找
+     */
+    @Test
+    public void selectBetween() {
+        QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
+        queryWrapper.between("id", 1L, 10000L);
+        orderMapper.selectList(queryWrapper)
                 .forEach(System.out::println);
     }
 }
