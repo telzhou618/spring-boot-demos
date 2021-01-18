@@ -20,7 +20,6 @@
         <module>springboot-webflux</module>
         <module>springboot-validate</module>
         <module>springboot-undertow</module>
-        <module>springboot-template</module>
         <module>springboot-simple-demos</module>
         <module>springboot-resttemplate</module>
         <module>springboot-mybatis-crud</module>
@@ -35,5 +34,6 @@
         <module>springboot-actuator</module>
         <module>springboot-sharding-jdbc</module>
         <module>springboot-aop</module>
+        <module>springboot-rss-feed</module>
     </modules>
 </project>
