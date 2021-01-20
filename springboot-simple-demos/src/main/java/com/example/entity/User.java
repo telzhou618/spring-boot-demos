@@ -20,7 +20,7 @@ public class User implements Serializable {
     private Integer id;
 
     @NotBlank(message = "用户名不能为空")
-    @Column(name = "user_name")
+    @Column(name = "username")
     private String username;
 
     @NotBlank(message = "密码不能为空")

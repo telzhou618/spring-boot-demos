@@ -5,10 +5,11 @@ package com.example.service;
  */
 public class UserSingletonService {
 
-    private static UserSingletonService userSingleton;
+    private volatile static UserSingletonService userSingleton;
 
     /**
      * 性能高的单例模式，推荐方式 👍👍👍👍👍
+     * userSingleton 要用 volatile 修饰禁止指令重排，防止拿到未初始化完成的对象
      *
      * @return
      */
@@ -51,7 +52,7 @@ public class UserSingletonService {
         return userSingleton;
     }
 
-    public UserSingletonService() {
+    private UserSingletonService() {
         System.out.println("实例化一次对象");
     }
 }
