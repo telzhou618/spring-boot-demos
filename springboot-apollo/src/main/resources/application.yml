@@ -1,4 +1,8 @@
 #appId 同来区别不同的配置
 app.id: SampleApp
 #apollo服务器地址
-apollo.meta: http://my-host.com:8080
+apollo.meta: http://localhost:8080
+apollo.bootstrap.enabled: true
+apollo.bootstrap.namespaces: application,TEST1.mysql
+server:
+  port: 8088
