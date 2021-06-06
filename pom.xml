@@ -36,5 +36,6 @@
         <module>springboot-aop</module>
         <module>springboot-rss-feed</module>
         <module>springboot-mybatis-plus</module>
+        <module>springboot-demo</module>
     </modules>
 </project>
