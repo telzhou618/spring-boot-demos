@@ -37,5 +37,6 @@
         <module>springboot-rss-feed</module>
         <module>springboot-mybatis-plus</module>
         <module>springboot-demo</module>
+        <module>springboot-distributed-zookeeper</module>
     </modules>
 </project>
