@@ -25,6 +25,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final CuratorFramework curatorFramework;
 
 
+    /**
+     * 购买商品
+     */
     @Override
     public boolean buyGoods(Integer id) {
         // zookeeper 分布式锁
@@ -45,10 +48,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
                 // 减库存
                 reduceStack(goods);
                 return true;
+            } else {
+                throw new RuntimeException("获取锁失败，下单用户过多，请稍后重试！");
             }
+        } catch (RuntimeException e) {
+            throw e;
         } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("操作过于频繁，请稍后重试！");
+            throw new RuntimeException("业务异常", e);
         } finally {
             try {
                 lock.release();
@@ -56,9 +62,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
                 e.printStackTrace();
             }
         }
-        return false;
     }
 
+    /**
+     * 提交订单
+     */
     private void submitOrder(Goods goods) {
         Order order = new Order()
                 .setGoodsName(goods.getGoodsName())
@@ -68,6 +76,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         this.save(order);
     }
 
+    /**
+     * 减库存
+     */
     private void reduceStack(Goods goods) {
         Goods update = new Goods()
                 .setId(goods.getId())
