@@ -28,6 +28,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Override
     public boolean buyGoods(Integer id) {
         // zookeeper 分布式锁
+        // @see https://curator.apache.org/getting-started.html
         InterProcessMutex lock = new InterProcessMutex(curatorFramework, "/goods-" + id);
         try {
             if (lock.acquire(5L, TimeUnit.SECONDS)) {
