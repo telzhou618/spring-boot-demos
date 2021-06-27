@@ -38,5 +38,6 @@
         <module>springboot-mybatis-plus</module>
         <module>springboot-demo</module>
         <module>springboot-distributed-zookeeper</module>
+        <module>springboot-distributed-redisson</module>
     </modules>
 </project>
