@@ -45,8 +45,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
                 // 减库存
                 reduceStack(goods);
                 return true;
-            }else {
-                throw  new RuntimeException("操作过于频繁，请稍后重试!");
+            } else {
+                throw new RuntimeException("操作过于频繁，请稍后重试!");
             }
 
         } catch (RuntimeException e) {
@@ -54,7 +54,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         } catch (Exception e) {
             throw new RuntimeException("业务异常", e);
         } finally {
-            lock.unlock();
+            if (lock.isLocked() && lock.isHeldByCurrentThread()) {
+                lock.unlock();
+            }
         }
     }
 
