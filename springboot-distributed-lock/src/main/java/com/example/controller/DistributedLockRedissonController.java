@@ -25,6 +25,7 @@ public class DistributedLockRedissonController {
      */
     @RequestMapping("/redisson/doReduceStack")
     public String doReduceStack() {
+        // 检查库存
         int store = Integer.parseInt(stringRedisTemplate.opsForValue().get("store"));
         if (store <= 0) {
             throw new RuntimeException("库存不足");
@@ -39,7 +40,7 @@ public class DistributedLockRedissonController {
             }
             // 减库存
             stringRedisTemplate.opsForValue().set("store", String.valueOf(store - 1));
-            // 下单
+            // 生成订单
             System.out.println("下单成功");
             return "下单成功";
         } finally {

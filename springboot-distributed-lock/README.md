@@ -1,2 +1,2 @@
-# springboot-distributed-redisson
-基于 redisson 实现的分布式锁
+# springboot-distributed-locl
+分布式锁实现
