@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author zhougaojun
+ * @author zhou1
  * @since 2021/6/29
  */
 @Configuration
