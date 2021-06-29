@@ -23,7 +23,6 @@ public class DistributedLockRedisLuaScriptController {
      * 模拟下单减库存，使用redis单线程的特性保证不超卖
      * 在 lua 脚本中校验库存，再减库存，保证原子性,前提是要把库存先存在 redis 中。
      * 库存扣减成功，再下单。
-     *
      */
     @RequestMapping("/test/doReduceStack")
     public String doReduceStack() {
