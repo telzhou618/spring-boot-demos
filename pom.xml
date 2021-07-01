@@ -40,5 +40,6 @@
         <module>springboot-distributed-zookeeper</module>
         <module>springboot-distributed-redisson</module>
         <module>springboot-distributed-lock</module>
+        <module>springboot-distributed-transaction-jta-atomikos</module>
     </modules>
 </project>
