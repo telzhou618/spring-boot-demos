@@ -30,3 +30,11 @@ springboot健康检查
 ```
 ## 获取自定义的检查参数
 http://localhost:8080/actuator/info
+```json
+{
+  "app": {
+    "name": "springboot-actuator-app",
+    "version": 1.0
+  }
+}
+```
