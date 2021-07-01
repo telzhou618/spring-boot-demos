@@ -6,6 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @author jameszhou
  */
 @SpringBootTest
-class SpringTests {
+public class SpringTests {
 
 }
