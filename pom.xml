@@ -37,8 +37,8 @@
         <module>springboot-rss-feed</module>
         <module>springboot-mybatis-plus</module>
         <module>springboot-demo</module>
-        <module>springboot-distributed-zookeeper</module>
-        <module>springboot-distributed-redisson</module>
+        <module>springboot-distributed-lock-zookeeper</module>
+        <module>springboot-distributed-lock-redis</module>
         <module>springboot-distributed-lock</module>
         <module>springboot-distributed-transaction-jta-atomikos</module>
     </modules>
