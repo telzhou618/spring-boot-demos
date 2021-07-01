@@ -1,2 +1,2 @@
-# springboot-distributed-locl
-分布式锁实现
+# springboot-distributed-lock
+springboot分布式锁使用实例
