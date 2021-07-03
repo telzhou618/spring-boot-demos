@@ -1,8 +1,8 @@
 package com.example.proessor;
 
 import com.alibaba.fastjson.JSON;
-import com.example.bean.Entity;
-import com.example.bean.UserDescEntity;
+import com.example.proessor.bean.Entity;
+import com.example.proessor.bean.UserDescEntity;
 import com.example.enums.EntityTypeEnum;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 public class UserDescEntityProcessor extends AbstractEntityProcessor {
 
 
+    /**
+     * 远程获取用用户个性签名
+     */
     @Override
     public Entity requestEntity() {
         try {

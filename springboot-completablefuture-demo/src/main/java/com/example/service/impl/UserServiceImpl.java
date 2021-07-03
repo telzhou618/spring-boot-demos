@@ -1,9 +1,9 @@
 package com.example.service.impl;
 
-import com.example.bean.AvatarEntity;
-import com.example.bean.Entity;
+import com.example.proessor.bean.AvatarEntity;
+import com.example.proessor.bean.Entity;
 import com.example.bean.User;
-import com.example.bean.UserDescEntity;
+import com.example.proessor.bean.UserDescEntity;
 import com.example.enums.EntityTypeEnum;
 import com.example.proessor.AbstractEntityProcessor;
 import com.example.service.UserService;

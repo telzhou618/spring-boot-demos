@@ -15,12 +15,17 @@ import java.util.concurrent.ThreadPoolExecutor;
 @Configuration
 public class CommonConfig {
 
+    /**
+     * RestTemplate
+     */
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
-
+    /**
+     * 线程池
+     */
     @Bean
     @ConditionalOnMissingBean(Executor.class)
     public Executor executor() {

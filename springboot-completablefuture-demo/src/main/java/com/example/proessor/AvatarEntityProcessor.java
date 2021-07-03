@@ -1,8 +1,8 @@
 package com.example.proessor;
 
 import com.alibaba.fastjson.JSON;
-import com.example.bean.AvatarEntity;
-import com.example.bean.Entity;
+import com.example.proessor.bean.AvatarEntity;
+import com.example.proessor.bean.Entity;
 import com.example.enums.EntityTypeEnum;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 public class AvatarEntityProcessor extends AbstractEntityProcessor {
 
 
+    /**
+     * 远程获取用户头像
+     */
     @Override
     public Entity requestEntity() {
         try {
@@ -21,7 +24,6 @@ public class AvatarEntityProcessor extends AbstractEntityProcessor {
             if (avatarEntity != null) {
                 avatarEntity.setEntityType(EntityTypeEnum.AVATAR_TYPE.getType());
             }
-            System.out.println(1/0);
             return avatarEntity;
         } catch (Exception e) {
             throw new RuntimeException("头像数据获取出错", e);

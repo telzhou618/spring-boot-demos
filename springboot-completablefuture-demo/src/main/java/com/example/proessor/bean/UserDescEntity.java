@@ -1,4 +1,4 @@
-package com.example.bean;
+package com.example.proessor.bean;
 
 import lombok.Data;
 
