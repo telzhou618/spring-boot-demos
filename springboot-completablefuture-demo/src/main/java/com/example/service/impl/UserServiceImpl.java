@@ -29,10 +29,11 @@ public class UserServiceImpl implements UserService {
     private final Executor executor;
 
     /**
-     *  并发从从A服务获取用户签名，从B服务获取用户头像
-     *  最后收集多方返回的数据，组合一个完整数据用户返回给客户端
-     *  任意一个服务执行异常由exceptionally处理
-     *  使用Spring线程池ThreadPoolTaskExecutor
+     * 并发从从A服务获取用户签名，从B服务获取用户头像
+     * 最后收集多方返回的数据，组合一个完整数据用户返回给客户端
+     * 任意一个服务执行异常由exceptionally处理
+     * 使用Spring线程池ThreadPoolTaskExecutor
+     *
      * @return
      */
     @Override
@@ -41,6 +42,7 @@ public class UserServiceImpl implements UserService {
         // 准备任务
         List<CompletableFuture<Entity>> completableFutures = abstractEntityProcessors.stream()
                 .map(processor -> CompletableFuture.supplyAsync(processor::requestEntity, executor)
+                        // 异常处理
                         .exceptionally(ex -> {
                             ex.printStackTrace();
                             System.out.println(ex.getMessage());

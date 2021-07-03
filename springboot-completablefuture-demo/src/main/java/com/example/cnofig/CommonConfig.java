@@ -35,6 +35,7 @@ public class CommonConfig {
         threadPoolTaskExecutor.setThreadNamePrefix("thread-pool-");
         threadPoolTaskExecutor.setQueueCapacity(100);
         threadPoolTaskExecutor.setKeepAliveSeconds(30);
+        // 拒绝策略，任务超过最大值丢给主线程处理
         threadPoolTaskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         return threadPoolTaskExecutor;
     }
