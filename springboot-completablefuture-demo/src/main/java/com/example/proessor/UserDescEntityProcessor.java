@@ -1,9 +1,9 @@
 package com.example.proessor;
 
 import com.alibaba.fastjson.JSON;
+import com.example.enums.EntityTypeEnum;
 import com.example.proessor.bean.Entity;
 import com.example.proessor.bean.UserDescEntity;
-import com.example.enums.EntityTypeEnum;
 import org.springframework.stereotype.Service;
 
 /**
