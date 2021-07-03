@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
 import java.util.stream.Collectors;
 
 /**
@@ -24,14 +25,15 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    List<AbstractEntityProcessor> abstractEntityProcessors;
+    private final List<AbstractEntityProcessor> abstractEntityProcessors;
+    private final Executor executor;
 
     @Override
     public User randomUserInfo() {
 
         // 准备任务
         List<CompletableFuture<Entity>> completableFutures = abstractEntityProcessors.stream()
-                .map(processor -> CompletableFuture.supplyAsync(processor::requestEntity)
+                .map(processor -> CompletableFuture.supplyAsync(processor::requestEntity, executor)
                         .exceptionally(ex -> {
                             ex.printStackTrace();
                             System.out.println(ex.getMessage());

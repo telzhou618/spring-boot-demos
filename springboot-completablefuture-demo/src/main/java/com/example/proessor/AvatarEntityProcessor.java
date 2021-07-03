@@ -21,6 +21,7 @@ public class AvatarEntityProcessor extends AbstractEntityProcessor {
             if (avatarEntity != null) {
                 avatarEntity.setEntityType(EntityTypeEnum.AVATAR_TYPE.getType());
             }
+            System.out.println(1/0);
             return avatarEntity;
         } catch (Exception e) {
             throw new RuntimeException("头像数据获取出错", e);
