@@ -28,6 +28,13 @@ public class UserServiceImpl implements UserService {
     private final List<AbstractEntityProcessor> abstractEntityProcessors;
     private final Executor executor;
 
+    /**
+     *  并发从从A服务获取用户签名，从B服务获取用户头像
+     *  最后收集多方返回的数据，组合一个完整数据用户返回给客户端
+     *  任意一个服务执行异常由exceptionally处理
+     *  使用Spring线程池ThreadPoolTaskExecutor
+     * @return
+     */
     @Override
     public User randomUserInfo() {
 
@@ -46,7 +53,7 @@ public class UserServiceImpl implements UserService {
         List<Entity> result = allOfCompletableFuture.thenApply(v -> completableFutures.stream().map(CompletableFuture::join)
                 .collect(Collectors.toList())).join();
 
-
+        // 组装数据
         User user = new User();
         user.setId(1).setUsername("tom");
         result.stream().filter(Objects::nonNull).forEach(entity -> {
