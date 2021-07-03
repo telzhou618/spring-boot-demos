@@ -41,5 +41,6 @@
         <module>springboot-distributed-lock-redis</module>
         <module>springboot-distributed-lock</module>
         <module>springboot-distributed-transaction-jta-atomikos</module>
+        <module>springboot-completablefuture-demo</module>
     </modules>
 </project>
