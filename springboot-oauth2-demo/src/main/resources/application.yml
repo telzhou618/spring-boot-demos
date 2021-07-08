@@ -1,0 +1,14 @@
+oauth:
+  github:
+    clientId: c8ab7443647824526528
+    clientSecret: 09882315c798381dc9acda0bd42a4ab839800c1f
+    redirectUri: http://localhost:8080/oauth/redirect
+spring:
+  freemarker:
+    suffix: .html
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          client: debug
