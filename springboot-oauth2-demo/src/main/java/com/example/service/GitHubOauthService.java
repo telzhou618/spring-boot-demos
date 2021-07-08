@@ -43,7 +43,11 @@ public class GitHubOauthService {
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
         HttpEntity entity = new HttpEntity(headers);
         ResponseEntity<String> result = restTemplate.exchange(URI.create(url), HttpMethod.GET, entity, String.class);
-        log.info("getUserInfos.result = {}", result.getBody());
-        return result.getBody();
+        if (result.getStatusCode() == HttpStatus.OK) {
+            String body = result.getBody();
+            log.info("getUserInfos.result = {}", body);
+            return body;
+        }
+        throw new RuntimeException("获取用户信息失败");
     }
 }
