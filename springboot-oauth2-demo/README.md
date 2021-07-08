@@ -6,4 +6,6 @@
 - A 网站使用授权码，向 GitHub 请求令牌。
 - GitHub 返回令牌.
 - A 网站使用令牌，向 GitHub 请求用户数据。
+# Github 注册应用
+https://github.com/settings/developers
 
