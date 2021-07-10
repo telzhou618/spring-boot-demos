@@ -1,0 +1,4 @@
+jwt:
+  secret: hello
+server:
+  port: 8088
