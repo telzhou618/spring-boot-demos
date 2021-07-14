@@ -1,0 +1,14 @@
+# 登录
+POST http://localhost:8088/user/login
+Content-Type:application/json
+
+{
+ "username": "admin",
+ "password": "123"
+}
+
+###
+# 获取用户信息
+GET http://localhost:8088/user/info?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhdXRoMCIsImV4cCI6MTYyNTk3Mzk2MCwiaWF0IjoxNjI1ODg3NTYwLCJ1c2VyIjoie1widXNlcklkXCI6MSxcInVzZXJuYW1lXCI6XCJhZG1pblwifSJ9.12X_tIxqN5FNm1xPbHpapwHgeB44A_dPD-JL7gQqy-E
+
+###
