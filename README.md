@@ -19,6 +19,7 @@
 - [SpringBoot 接入极验(geetest)实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-geetest)
 
 ## SpringBoot 分布式实例
+- [SpringBoot 分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock)
 - [SpringBoot 基于Redis的分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock-redis)
 - [SpringBoot 基于Zookeeper的分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock-zookeeper)
 - [SpringBoot 基于Atomikos的分布式事务](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-transaction-jta-atomikos)
