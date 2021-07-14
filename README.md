@@ -21,7 +21,7 @@
 ## SpringBoot 分布式实例
 - [SpringBoot 基于Redis的分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock-redis)
 - [SpringBoot 基于Zookeeper的分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock-zookeeper)
-- [SpringBoot 基于Atomikos的分布式实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-transaction-jta-atomikos)
+- [SpringBoot 基于Atomikos的分布式事务](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-transaction-jta-atomikos)
 - [SpringBoot 分库分表Sharding实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-sharding-jdbc)
 - [SpringBoot 分布式Token JWT实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-jwt)
 - [SpringBoot 分布式定时任务Elastic-job实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-elastic-job)
