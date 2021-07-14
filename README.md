@@ -25,5 +25,5 @@
 - [SpringBoot 分库分表Sharding实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-sharding-jdbc)
 - [SpringBoot 分布式Token JWT实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-jwt)
 - [SpringBoot 分布式定时任务Elastic-job实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-elastic-job)
-- [SpringBoot Oauth2 实现github授权登录实例](https://github.com/telzhou618/spring-boot-demos/tree/master/sspringboot-oauth2-demo)
+- [SpringBoot Oauth2 实现github授权登录实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-oauth2-demo)
 - [SpringBoot 接入Apollo分布式配置中心实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-apollo)
