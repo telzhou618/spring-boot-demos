@@ -17,6 +17,7 @@
 - [SpringBoot Validate 参数校验实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-validate)
 - [SpringBoot Webflux 编程实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-webflux)
 - [SpringBoot 接入极验(geetest)实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-geetest)
+- [SpringBoot 阿里巴巴Sentinel实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-sentinel-demo)
 
 ## SpringBoot 分布式实例
 - [SpringBoot 分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock)
