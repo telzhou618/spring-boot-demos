@@ -6,6 +6,8 @@
 ``` shell
 java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
 ```
+- 访问地址：http://localhost:8080
+- 账号/密码：sentinel/sentinel
 
 ## 客户端启动参数
 
