@@ -35,6 +35,6 @@ springboot 使用 smart-docs 生成接口文档,相比swagger,smart-docs侵入�
 - projectName 项目名称
 ## step3
 
-在idea maven插件找到 smart-doc,执行 smart-doc:html 即可生成接口文件。
+在idea maven插件找到 smart-doc,执行 smart-doc:html 生成接口文档。
 
 
