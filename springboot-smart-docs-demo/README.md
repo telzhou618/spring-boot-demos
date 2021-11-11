@@ -1,8 +1,8 @@
 # springboot-smart-docs-demo
-springboot 使用 smart-docs 生成接口文档,相比swagger,smart-docs侵入性小。
+在springboot项目中使用 smart-docs 生成接口文档,相比swagger,smart-docs侵入性小。
 
 ## step1
-在pom.xml中添加依赖
+在pom.xml中添加插件依赖
 ```xml
     <plugin>
         <groupId>com.github.shalousun</groupId>
@@ -16,7 +16,7 @@ springboot 使用 smart-docs 生成接口文档,相比swagger,smart-docs侵入�
 ```
 
 ## step2 
-配置 smart-doc.json 配置文件,注意路径要和插件一直
+配置文件 smart-doc.json,存放在resources目录下
 ```json
 {
   "serverUrl": "http://localhost:8080",
@@ -27,10 +27,10 @@ springboot 使用 smart-docs 生成接口文档,相比swagger,smart-docs侵入�
   "projectName": "springboot-smart-docs-demo"
 }
 ```
-- serverUrl 服务器地址，填写可测试方便
+- serverUrl 服务器地址，填写在文档测试很方便
 - outPath 文档保存位置
-- allInOne 文档合并在一个html中
-- createDebugPage 支持在文档中调试
+- allInOne 文档是否合并在一个html中
+- createDebugPage 是否支持在文档中调试
 - allInOneDocFileName 文件名称
 - projectName 项目名称
 ## step3
