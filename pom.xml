@@ -46,5 +46,6 @@
         <module>springboot-jwt</module>
         <module>springboot-sentinel-demo</module>
         <module>springboot-smart-docs-demo</module>
+        <module>springboot-profile-demo</module>
     </modules>
 </project>
