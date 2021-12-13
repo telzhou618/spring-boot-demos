@@ -1,5 +1,8 @@
 # 控制台日志高亮
 spring:
+  aop:
+    auto: false
+
   output:
     ansi:
       enabled: always

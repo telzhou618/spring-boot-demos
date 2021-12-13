@@ -1,15 +1,9 @@
 package com.example.aspect;
 
-import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
-import org.aspectj.lang.reflect.MethodSignature;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.Method;
 
 /**
  * @author zhougaojun
@@ -23,15 +17,22 @@ public class LogAspect {
     public void pointcut() {
     }
 
+    @Before("pointcut()")
+    public void before() {
+        log.info("Before通知 -> 业务方法执行前调用...");
+    }
+
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-
-        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
-        Method method = methodSignature.getMethod();
-        log.info("参数 ==> {}", JSON.toJSONString(method.getParameters()));
+        log.info("Around通知 -> 业务方法执行前调用...");
         Object object = joinPoint.proceed();
-        log.info("返回 <== {}", JSON.toJSONString(object));
+        log.info("Around通知 -> 业务方法执行后调用...");
         return object;
+    }
+
+    @After("pointcut()")
+    public void after() {
+        log.info("After通知 -> 业务方法执行后调用...");
     }
 
 }

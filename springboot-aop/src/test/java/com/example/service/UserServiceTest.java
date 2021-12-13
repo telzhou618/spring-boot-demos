@@ -9,8 +9,8 @@ class UserServiceTest extends SpringTests {
     @Autowired
     private UserService userService;
     @Test
-    void listALl() {
-        System.out.println(userService.listALl());
+    void test() {
+        userService.test();
     }
 
 }

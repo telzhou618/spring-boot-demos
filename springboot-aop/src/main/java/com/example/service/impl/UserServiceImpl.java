@@ -1,24 +1,26 @@
 package com.example.service.impl;
 
-import com.example.entity.User;
 import com.example.service.UserService;
-import com.google.common.collect.Lists;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author zhougaojun
  */
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService {
 
 
     @Override
-    public List<User> listALl() {
-        return Lists.newArrayList(
-                new User().setId(1).setUsername("tom").setPassword("123456"),
-                new User().setId(2).setUsername("lucy").setPassword("123456")
-        );
+    public void test() {
+        log.info("执行业务方法test...");
+        ((UserService) AopContext.currentProxy()).test1();
+    }
+
+    @Override
+    public void test1() {
+        log.info("执行业务方法test1...");
     }
 }
