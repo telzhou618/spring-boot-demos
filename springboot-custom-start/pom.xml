@@ -12,6 +12,6 @@
 
     <modules>
         <module>redis-spring-boot-start</module>
-        <module>springboot-redis-start-demo</module>
+        <module>redis-springboot-redis-test</module>
     </modules>
 </project>
