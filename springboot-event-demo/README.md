@@ -6,7 +6,8 @@ spring 已封装了事件发布和订阅相关的处理方案，可以帮助开�
 2. 发布事件，需要 ApplicationEventPublisher 对象，可通过实现 ApplicationEventPublisherAware 获得。
 3. 监听事件，有两种，一种是实现 ApplicationListener 接口，一种是给方法加上@EventListener注解。
 
-## 实例
+## 应用实例
+模拟用户注册成功后，给用发优惠券，发邮件通知的业务场景。
 1. 定义自定义事件对象,需要继承 ApplicationEvent。
 
 ```java
