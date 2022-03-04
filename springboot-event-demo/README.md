@@ -1,13 +1,13 @@
 # springboot-event-demo
 
 ## spring 事件监听
-spring 已封装了事件发布和订阅相关的处理方案，可以帮助开发中解构，失败包含三个步骤。
+spring 已封装了事件发布和订阅相关的处理方案，可以帮助开发解耦，减少不同模块之间的依赖，实现包含三个步骤。
 1. 定义事件，需继承 ApplicationEvent。
 2. 发布事件，需要 ApplicationEventPublisher 对象，可通过实现 ApplicationEventPublisherAware 获得。
 3. 监听事件，有两种，一种是实现 ApplicationListener 接口，一种是给方法加上@EventListener注解。
 
 ## 实例
-1. 定义自定义事件,需要继承 ApplicationEvent。
+1. 定义自定义事件对象,需要继承 ApplicationEvent。
 
 ```java
 public class UserRegisterEvent extends ApplicationEvent {
@@ -39,7 +39,7 @@ public class UserRegisterEvent extends ApplicationEvent {
 }
 ```
 
-2. 定义事件发布器器，事件发布需要ApplicationEventPublisher发布，所有实现 ApplicationEventPublisherAware 获取发布器，调用它的 publishEvent 方法发布事件。
+2. 定义事件发布器器，事件发布需要ApplicationEventPublisher对象，实现 ApplicationEventPublisherAware 可获取发布器对象，调用它的 publishEvent 方法可发布事件。
 
 ```java
 
@@ -61,7 +61,7 @@ public class UserService implements ApplicationEventPublisherAware {
 
 ```
 
-3. 定义事件监听类，有两种方法，一种是实现 ApplicationListener接口，可通过泛型指定关心的事件， 另一种是通过方法加上 @EventListener 注解同样可实现事件监听。
+3. 定义事件监听类，有两种方法，一种是实现 ApplicationListener 接口，可通过泛型指定关心的事件， 另一种是给方法加上 @EventListener 注解同样可实现事件监听。
 
 ```java
 @Service
