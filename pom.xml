@@ -48,6 +48,7 @@
         <module>springboot-smart-docs-demo</module>
         <module>springboot-profile-demo</module>
         <module>springboot-event-demo</module>
+        <module>springboot-swagger-docs-demo</module>
     </modules>
     <dependencyManagement>
         <dependencies>

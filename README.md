@@ -19,6 +19,7 @@
 - [SpringBoot 接入极验(geetest)实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-geetest)
 - [SpringBoot 阿里巴巴Sentinel实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-sentinel-demo)
 - [SpringBoot event 事件](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-event-demo)
+- [SpringBoot 整合swagger3.0实例](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-swagger-docs-demo)
 
 ## SpringBoot 分布式实例
 - [SpringBoot 分布式锁](https://github.com/telzhou618/spring-boot-demos/tree/master/springboot-distributed-lock)
