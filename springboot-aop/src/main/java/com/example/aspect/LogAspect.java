@@ -35,4 +35,9 @@ public class LogAspect {
         log.info("After通知 -> 业务方法执行后调用...");
     }
 
+    @AfterThrowing(value = "pointcut()", throwing = "ex")
+    public void afterThrowing(Throwable ex) {
+        ex.printStackTrace();
+        log.info("AfterThrowing通知 -> 业务方法执行异常调用...");
+    }
 }
