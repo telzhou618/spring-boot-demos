@@ -49,6 +49,7 @@
         <module>springboot-profile-demo</module>
         <module>springboot-event-demo</module>
         <module>springboot-swagger-docs-demo</module>
+        <module>springboot-open-feign-demo</module>
     </modules>
     <dependencyManagement>
         <dependencies>
