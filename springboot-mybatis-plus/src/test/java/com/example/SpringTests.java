@@ -8,6 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @author jameszhou
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = Application.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SpringTests {
 }
