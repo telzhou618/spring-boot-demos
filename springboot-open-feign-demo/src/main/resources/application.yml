@@ -1,3 +1,6 @@
 logging:
   level:
     com.example.JSONPlaceHolderClient: debug
+feign:
+  httpclient:
+    enabled: true

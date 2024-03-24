@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>springboot-feginclient-demo</artifactId>
+    <artifactId>springboot-open-feign-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-open-feign-demo</name>
     <description>Demo project for Spring Boot</description>
@@ -26,7 +26,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
