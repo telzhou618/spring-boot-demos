@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consumer-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+# SpringBoot的默认日志级别是info级别，feign的日志级别是debug级别，info > debug，所以在默认情况下，feign的日志不会输出
+
+logging:
+  level:
+    com.example.FeignDemoClint: debug
+
+feign:
+  client:
+    config:
+      # feign 全局设置
+      default:
+        loggerLevel: full
+
