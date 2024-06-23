@@ -50,6 +50,12 @@
         <module>springboot-event-demo</module>
         <module>springboot-swagger-docs-demo</module>
         <module>springboot-open-feign-demo</module>
+        <module>springcloud-alibaba-discovery-demo</module>
+        <module>springboot-knife4j-demo</module>
+        <module>springboot-ai-demo</module>
+        <module>spring-security-demo</module>
+        <module>simple-canal-client-demo</module>
+        <module>springboot-canal-demo</module>
     </modules>
     <dependencyManagement>
         <dependencies>
