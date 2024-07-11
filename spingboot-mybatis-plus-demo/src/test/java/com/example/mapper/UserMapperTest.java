@@ -1,5 +1,6 @@
 package com.example.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.example.BaseTest;
 import com.example.entity.Post;
 import com.example.entity.User;
@@ -24,10 +25,24 @@ public class UserMapperTest extends BaseTest {
 
     @Test
     public void test() {
-        List<User> users = userMapper.selectList(null);
-        users.forEach(System.out::println);
 
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getId, 1);
+        List<User> users = userMapper.selectList(queryWrapper);
+        users.forEach(System.out::println);
+    }
+
+    @Test
+    public void test2() {
+        // 无条件，报错，禁止全表扫描
         List<Post> posts = postMapper.selectList(null);
         posts.forEach(System.out::println);
+    }
+
+    @Test
+    public void test3() {
+        // 禁止无条件删除，
+        userMapper.delete(null);
+        postMapper.delete(null);
     }
 }
